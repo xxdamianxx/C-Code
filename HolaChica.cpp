@@ -1,47 +1,44 @@
-// ConsoleApplication1.cpp : Defines the entry point for the console application.
-//
+/*
+* HolaChica.cpp
+* This program is a Spanish Chatbot.
+* 
+* Created by Pedro Damian Sanchez Jr. on 02/22/2017
+* Copyright © 2024. All rights reserved.
+*/
 
-#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <cmath>
+
 using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
-{
+int main() {
 	int edad;
 	string nombre;
 
-	cout << "Hola Chica, mi nombre es Damian Sanchez, programador extraordinario.\n\nComo te llamas?\n";
-	cin >> nombre;
+	cout << "Hola Chica! Mi nombre es Pedro Damian Sanchez Jr, programador extraordinario.\n\n\nComo te llamas?\n";
+	cout << "Escriba tu nombre: "; getline(cin, nombre);
 	cout << endl;
 
 	cout << "Hola " << nombre << ", mucho gusto en conoser te.\n\nY cual es tu edad?\n";
-	cin >> edad;
+	cout << "Introduzca su edad: "; cin >> edad;
 	cout << endl;
 
-	if (edad < 18)
-	{
-		cout << "Ay guey, hablamos despues de que cumples 18, bye.";
+	if (edad < 18) {
+		cout << "Ay guey! Hablamos despues de que cumples 18, bye.\n";
 	}
-
-	if (edad == 18)
-	{
-		cout << "Mmmm, que rico, bebe.";
+	else if (edad == 18) {
+		cout << "Mmmm. Que rico, bebe.\n";
 	}
-
-	if (edad > 19 || edad < 26)
-	{
-		cout << "Estas un poquito mas joven que yo, pero que rico.";
+	else if (edad >= 19 && edad <= 36) {
+		cout << "Estas un poquito mas joven que yo, pero que rico.\n";
 	}
-
-	else
-	{
-		cout << "Estas muy grande para mi, bye.";
+	else {
+		cout << "Estas muy grande para mi, bye.\n";
 	}
+	cout << endl;
 
 	fflush(stdin);
 	cin.get();
 	return 0;
 }
-
